@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Botanic Rhythm Gardening - Contact Us</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  /* CSS Variables for garden and insect/music theme */
+  :root {
+    --color-background: #112a12;
+    --color-foreground: #e6f1d2;
+    --color-accent: #5a9a4e;
+    --color-accent-dark: #3b6b2f;
+    --color-muted: #9dbb81;
+    --color-hover: #a3c77b;
+    --color-card-bg: rgba(90, 154, 78, 0.15);
+    --color-shadow: rgba(0,0,0,0.3);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--color-hover);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--color-accent-dark);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px var(--color-shadow);
+    z-index: 1000;
+  }
+
+  header .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: var(--color-foreground);
+    user-select: none;
+    display: flex;
+    align-items: center;
+  }
+
+  header .logo svg {
+    margin-right: 8px;
+    fill: var(--color-hover);
+  }
+
+  nav {
+    display: flex;
+    gap: 1.7rem;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover, nav a:focus {
+    background-color: var(--color-hover);
+    color: var(--color-background);
+  }
+  nav a[aria-current="page"] {
+    background-color: var(--color-hover);
+    color: var(--color-background);
+  }
+
+  main {
+    max-width: 1080px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 1rem;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-hover);
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: var(--color-foreground);
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+  }
+
+  ul {
+    margin-left: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-muted);
+  }
+  ul li {
+    margin-bottom: 0.6rem;
+  }
+
+  footer {
+    margin-top: 4rem;
+    background: var(--color-accent-dark);
+    color: var(--color-foreground);
+    text-align: center;
+    padding: 1.8rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    user-select: none;
+  }
+  footer address {
+    font-style: normal;
+    margin-bottom: 0.4rem;
+  }
+
+  /* Insect + music decorative patterns */
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 40vh;
+    left: -8vw;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at center, var(--color-hover) 20%, transparent 70%);
+    border-radius: 50% 50% 50% 40% / 60% 50% 50% 40%;
+    filter: blur(30px);
+    opacity: 0.15;
+    transform: rotate(25deg);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: "♪";
+    position: fixed;
+    top: 25vh;
+    right: 3vw;
+    font-size: 70px;
+    color: var(--color-hover);
+    opacity: 0.15;
+    transform: rotate(-15deg);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    font-weight: 900;
+  }
+
+  .wing-pattern {
+    position: absolute;
+    width: 90px;
+    height: 130px;
+    background: radial-gradient(ellipse 60% 75% at center, var(--color-accent), transparent 80%);
+    border-radius: 60% 40% 60% 40% / 50% 60% 40% 50%;
+    opacity: 0.3;
+    filter: drop-shadow(0 0 2px var(--color-accent));
+    transform-origin: center bottom;
+    animation: wing-flap 4s ease-in-out infinite;
+  }
+  .wing-pattern.w1 { top: 20%; left: 5%; animation-delay: 0s;}
+  .wing-pattern.w2 { top: 40%; left: 90%; animation-delay: 1.5s;}
+  .wing-pattern.w3 { top: 75%; left: 4%; animation-delay: 3s;}
+
+  @keyframes wing-flap {
+    0%,100% { transform: rotate(15deg) scale(1); }
+    50% { transform: rotate(-12deg) scale(1.1); }
+  }
+
+  /* Forms styling - clean and modern */
+  form.contact-form {
+    margin-top: 2rem;
+    background: var(--color-card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px var(--color-shadow);
+  }
+  form.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+  form.contact-form input,
+  form.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.5rem;
+    border: 1.5px solid var(--color-muted);
+    border-radius: 12px;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+  form.contact-form input:focus,
+  form.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-hover);
+  }
+  form.contact-form button {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 6px 15px rgba(255 255 255 /0.4);
+    transition: background-color 0.3s ease;
+  }
+  form.contact-form button:hover,
+  form.contact-form button:focus {
+    background-color: var(--color-hover);
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    nav {
+      gap: 1rem;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<header role="banner" aria-label="Primary navigation">
+  <a href="index.html" class="logo" aria-label="Botanic Rhythm Gardening homepage">
+    <svg aria-hidden="true" width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="4"/>
+      <path d="M20 44s8-12 20-12" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="43" cy="28" r="4" fill="currentColor"/>
+    </svg>
+    Botanic Rhythm
+  </a>
+  <nav role="navigation" aria-label="Primary menu">
+  <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+  </nav>
+</header>
+
+<main id="contact-us" tabindex="-1">
+  <h1>Contact Botanic Rhythm Gardening Services</h1>
+
+  <p>We value communication with our customers and visitors. Whether you have questions about our services, want to request a quote, or just want to share your garden story, we're here to listen. Below you'll find comprehensive contact information, guidelines for reaching various departments, and useful answers to common inquiries.</p>
+
+  <h2>Customer Support & General Inquiries</h2>
+  <p>Our Customer Support team is ready to assist you with any questions or concerns you may have. For general inquiries, service information, or to speak with a representative, you may reach us:</p>
+  <ul>
+    <li><strong>Phone:</strong> <a href="tel:+18882009898">+1 (888) 200-9898</a> (Monday–Friday, 9:00 AM – 6:00 PM EST)</li>
+    <li><strong>Email:</strong> <a href="mailto:support@botanicrhythm.com">support@botanicrhythm.com</a></li>
+    <li><strong>Live Chat:</strong> Available on our website from 9 AM to 5 PM weekdays</li>
+  </ul>
+
+  <h2>Garden Design Consultations</h2>
+  <p>If you are interested in planning your garden or landscaping project, our expert design consultants are ready to help create your personalized oasis. Please contact us to schedule an appointment or a virtual consultation:</p>
+  <ul>
+    <li><strong>Design Team Email:</strong> <a href="mailto:design@botanicrhythm.com">design@botanicrhythm.com</a></li>
+    <li><strong>Phone:</strong> <a href="tel:+18882009898">+1 (888) 200-9898</a></li>
+  </ul>
+
+  <h2>Technical Support for Website Issues</h2>
+  <p>If you encounter any technical issues while browsing our website, such as broken links, login problems, or trouble accessing resources, please let us know by contacting:</p>
+  <ul>
+    <li><strong>Technical Support Email:</strong> <a href="mailto:techsupport@botanicrhythm.com">techsupport@botanicrhythm.com</a></li>
+    <li><strong>Support Hotline:</strong> <a href="tel:+18882009898">+1 (888) 200-9898</a> (Hours: 9 AM to 5 PM EST)</li>
+  </ul>
+
+  <h2>Feedback and Suggestions</h2>
+  <p>Your feedback helps us grow and serve you better. Whether you want to commend our team or suggest improvements, please use any of the above contact methods or share your thoughts using our online form below.</p>
+
+  <h2>How to Visit Us</h2>
+  <p>We welcome visitors by appointment to our office and garden demonstration site located in New York City. Please note the following guidelines to ensure a smooth visit:</p>
+  <ul>
+    <li>Appointments are required for all visits; no walk-ins accepted.</li>
+    <li>Please wear comfortable shoes suitable for garden terrain.</li>
+    <li>Respect social distancing and COVID-19 protocols as posted on-site.</li>
+    <li>Photography is allowed for personal use; commercial requests require prior permission.</li>
+    <li>Our address is: <strong>69 W 9th St, New York, NY 10011, USA</strong>. Easily accessible by public transportation and parking facilities nearby.</li>
+  </ul>
+
+  <h2>Contact Form</h2>
+  <p>For your convenience, please fill out the form below to send us a message. Provide as much detail as possible so we can assist you accurately and promptly.</p>
+  
+  <form class="contact-form" action="mailto:support@botanicrhythm.com" method="POST" enctype="text/plain" aria-label="Contact form">
+    <label for="fullName">Full Name <span aria-hidden="true" style="color:#a3c77b;">*</span></label>
+    <input type="text" id="fullName" name="fullName" placeholder="Your name" required />
+
+    <label for="emailAddress">Email Address <span aria-hidden="true" style="color:#a3c77b;">*</span></label>
+    <input type="email" id="emailAddress" name="emailAddress" placeholder="you@example.com" required />
+
+    <label for="phoneNumber">Phone Number (optional)</label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+1 555 123 4567" />
+
+    <label for="inquiryType">Inquiry Type <span aria-hidden="true" style="color:#a3c77b;">*</span></label>
+    <select id="inquiryType" name="inquiryType" required>
+      <option value="" disabled selected>Select an option</option>
+      <option value="general">General Inquiry</option>
+      <option value="support">Customer Support</option>
+      <option value="design">Garden Design Consultation</option>
+      <option value="feedback">Feedback / Suggestions</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="message">Message <span aria-hidden="true" style="color:#a3c77b;">*</span></label>
+    <textarea id="message" name="message" rows="8" placeholder="Please write your message here..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <h2>Frequently Asked Questions (FAQs)</h2>
+  
+  <h3>1. How do I schedule a garden consultation?</h3>
+  <p>Scheduling a garden consultation is easy! You can call our design team direct at <a href="tel:+18882009898">+1 (888) 200-9898</a> or email <a href="mailto:design@botanicrhythm.com">design@botanicrhythm.com</a>. We also accept requests via the contact form and will reply promptly to confirm your appointment.</p>
+
+  <h3>2. What areas do you serve?</h3>
+  <p>Our primary service area covers New York City and surrounding counties. We also take on projects in select upstate and neighboring states by special arrangement. Please inquire about availability.</p>
+
+  <h3>3. Can I visit your garden demonstration site without an appointment?</h3>
+  <p>For security and quality reasons, visits are by appointment only. Please contact us ahead of time so we can prepare your visit for a pleasant and safe experience.</p>
+
+  <h3>4. What COVID-19 measures are in place?</h3>
+  <p>We follow all local health guidelines to ensure the safety of our staff and clients. Onsite visits require masks and adherence to social distancing. We also offer virtual consultations for convenience.</p>
+
+  <h3>5. How can I provide feedback?</h3>
+  <p>We value your input! Submit feedback via our contact form, email us at <a href="mailto:support@botanicrhythm.com">support@botanicrhythm.com</a>, or call customer support.</p>
+
+  <h3>6. When can I expect a response to my inquiry?</h3>
+  <p>We typically respond to inquiries within 24 to 48 hours during business days. Urgent requests can be flagged by phone.</p>
+
+  <h2>Helpful Tips for Contacting Us</h2>
+  <p>To ensure efficient and productive communication:</p>
+  <ul>
+    <li>Provide detailed information about your inquiry or project.</li>
+    <li>Include photos or diagrams if applicable.</li>
+    <li>List your preferred contact times and methods.</li>
+    <li>Be clear about your goals and expectations.</li>
+  </ul>
+
+  <h2>Technical Support</h2>
+  <p>If you experience any issues with our website's features, online forms, or account management tools, our technical support team is on hand to assist. Please use the following contacts:</p>
+  <ul>
+    <li>Email: <a href="mailto:techsupport@botanicrhythm.com">techsupport@botanicrhythm.com</a></li>
+    <li>Phone: <a href="tel:+18882009898">+1 (888) 200-9898</a></li>
+  </ul>
+
+  <h2>Social Media and Community Engagement</h2>
+  <p>Connect with us on social media for gardening tips, seasonal advice, and community events:</p>
+  <ul>
+    <li><a href="https://facebook.com/botanicrhythm" target="_blank" rel="noopener">Facebook</a></li>
+    <li><a href="https://instagram.com/botanicrhythm" target="_blank" rel="noopener">Instagram</a></li>
+    <li><a href="https://twitter.com/botanicrhythm" target="_blank" rel="noopener">Twitter</a></li>
+  </ul>
+
+  <h2>Corporate and Partnership Inquiries</h2>
+  <p>We welcome partnerships with local businesses, community groups, and environmental organizations. For collaboration proposals or corporate services, contact:</p>
+  <ul>
+    <li>Email: <a href="mailto:partners@botanicrhythm.com">partners@botanicrhythm.com</a></li>
+    <li>Phone: <a href="tel:+18882009898">+1 (888) 200-9898</a></li>
+  </ul>
+
+  <h2>Emergency Contact</h2>
+  <p>For urgent matters relating to ongoing gardening projects that require immediate action outside normal office hours, please reach our emergency line:</p>
+  <ul>
+    <li>Emergency Phone: <a href="tel:+18882009898">+1 (888) 200-9898</a></li>
+  </ul>
+
+  <h2>Our Office Location</h2>
+  <p>We are located at:</p>
+  <address>
+    <strong>Botanic Rhythm Gardening Services</strong><br />
+    69 W 9th St, New York, NY 10011, USA
+  </address>
+  <p>Our office is centrally located within walking distance of public transport hubs and parking facilities, making visits convenient for clients and partners alike.</p>
+
+  <h2>Directions and Parking</h2>
+  <p>Depending on your mode of transport:</p>
+  <ul>
+    <li><strong>By Subway:</strong> The nearest subway stations are 14th Street/8th Avenue (A, C, E, L lines) and West 4th Street. Both stations are less than a 10-minute walk to our office.</li>
+    <li><strong>On Foot:</strong> We are located two blocks from Washington Square Park, a scenic area perfect for a stroll to your appointment.</li>
+    <li><strong>By Car:</strong> Limited street parking is available. Nearby paid parking garages include:</li>
+    <ul>
+      <li>Icon Parking Garage at 150 W 10th St</li>
+      <li>SP+ Parking at 51 W 8th St</li>
+    </ul>
+  </ul>
+
+  <h2>Accessibility</h2>
+  <p>Our facility is wheelchair accessible with ramps and accessible restrooms. Should you require any special accommodations, please notify us in advance so we can make the necessary arrangements to ensure your comfort.</p>
+
+  <h2>Newsletter and Updates</h2>
+  <p>Subscribe to our newsletter to stay informed about new services, gardening tips, seasonal promotions, and community events. To sign up, please email <a href="mailto:newsletter@botanicrhythm.com">newsletter@botanicrhythm.com</a> or use the subscription form on our website.</p>
+
+  <h2>Privacy in Communication</h2>
+  <p>We respect your privacy in all forms of communication. Personal information submitted via phone, email, or web forms is handled according to our Privacy Policy to protect your data and confidentiality.</p>
+
+  <h2>Thank You</h2>
+  <p>Thank you for your interest in Botanic Rhythm Gardening Services. We appreciate your time and look forward to assisting you grow your green spaces in harmony with nature’s rhythm.</p>
+
+</main>
+
+<footer role="contentinfo">
+  <address>
+    69 W 9th St, New York, NY 10011, USA<br/>
+    Phone: <a href="tel:+18882009898" style="color: var(--color-foreground); text-decoration: underline;">+1 (888) 200-9898</a>
+  </address>
+  &copy; 2024 Botanic Rhythm Gardening Services. All rights reserved.
+</footer>
+
+<!-- Decorative wing patterns -->
+<div class="wing-pattern w1" aria-hidden="true"></div>
+<div class="wing-pattern w2" aria-hidden="true"></div>
+<div class="wing-pattern w3" aria-hidden="true"></div>
+
+</body>
+</html>
+

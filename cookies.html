@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Botanic Rhythm Gardening - Cookies Policy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  /* CSS Variables for garden and insect/music theme */
+  :root {
+    --color-background: #112a12;
+    --color-foreground: #e6f1d2;
+    --color-accent: #5a9a4e;
+    --color-accent-dark: #3b6b2f;
+    --color-muted: #9dbb81;
+    --color-hover: #a3c77b;
+    --color-card-bg: rgba(90, 154, 78, 0.15);
+    --color-shadow: rgba(0,0,0,0.3);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    font-size: 18px;
+    scroll-behavior: smooth;
+    padding-bottom: 120px; /* space for cookie consent box */
+  }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--color-hover);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--color-accent-dark);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px var(--color-shadow);
+    z-index: 1000;
+  }
+
+  header .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: var(--color-foreground);
+    user-select: none;
+    display: flex;
+    align-items: center;
+  }
+
+  header .logo svg {
+    margin-right: 8px;
+    fill: var(--color-hover);
+  }
+
+  nav {
+    display: flex;
+    gap: 1.7rem;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover, nav a:focus {
+    background-color: var(--color-hover);
+    color: var(--color-background);
+  }
+
+  main {
+    max-width: 1080px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 1rem;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-hover);
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: var(--color-foreground);
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+  }
+
+  ul {
+    margin-left: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-muted);
+  }
+  ul li {
+    margin-bottom: 0.6rem;
+  }
+
+
+  footer {
+    margin-top: 4rem;
+    background: var(--color-accent-dark);
+    color: var(--color-foreground);
+    text-align: center;
+    padding: 1.8rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    user-select: none;
+  }
+  footer address {
+    font-style: normal;
+    margin-bottom: 0.4rem;
+  }
+
+  /* Insect + music decorative patterns */
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 40vh;
+    left: -8vw;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at center, var(--color-hover) 20%, transparent 70%);
+    border-radius: 50% 50% 50% 40% / 60% 50% 50% 40%;
+    filter: blur(30px);
+    opacity: 0.15;
+    transform: rotate(25deg);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: "♪";
+    position: fixed;
+    top: 25vh;
+    right: 3vw;
+    font-size: 70px;
+    color: var(--color-hover);
+    opacity: 0.15;
+    transform: rotate(-15deg);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    font-weight: 900;
+  }
+
+  .wing-pattern {
+    position: absolute;
+    width: 90px;
+    height: 130px;
+    background: radial-gradient(ellipse 60% 75% at center, var(--color-accent), transparent 80%);
+    border-radius: 60% 40% 60% 40% / 50% 60% 40% 50%;
+    opacity: 0.3;
+    filter: drop-shadow(0 0 2px var(--color-accent));
+    transform-origin: center bottom;
+    animation: wing-flap 4s ease-in-out infinite;
+  }
+  .wing-pattern.w1 { top: 20%; left: 5%; animation-delay: 0s;}
+  .wing-pattern.w2 { top: 40%; left: 90%; animation-delay: 1.5s;}
+  .wing-pattern.w3 { top: 75%; left: 4%; animation-delay: 3s;}
+
+  @keyframes wing-flap {
+    0%,100% { transform: rotate(15deg) scale(1); }
+    50% { transform: rotate(-12deg) scale(1.1); }
+  }
+
+  /* Cookie Consent Dialog Styles */
+  #cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 900px;
+    width: 95%;
+    background: rgba(27, 43, 12, 0.95);
+    color: var(--color-foreground);
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 15px var(--color-shadow);
+    padding: 1.3rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    z-index: 1100;
+  }
+
+  #cookie-consent p {
+    flex: 1 1 60%;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  #cookie-consent button {
+    background-color: var(--color-accent);
+    border: none;
+    color: var(--color-background);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #cookie-consent button:hover,
+  #cookie-consent button:focus {
+    background-color: var(--color-hover);
+  }
+
+  #cookie-consent button.decline {
+    background-color: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+  }
+  #cookie-consent button.decline:hover,
+  #cookie-consent button.decline:focus {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    #cookie-consent {
+      flex-direction: column;
+      align-items: center;
+    }
+    #cookie-consent p {
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    #cookie-consent button {
+      flex-basis: 45%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header role="banner" aria-label="Primary navigation">
+  <a href="index.html" class="logo" aria-label="Botanic Rhythm Gardening homepage">
+    <svg aria-hidden="true" width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="4"/>
+      <path d="M20 44s8-12 20-12" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="43" cy="28" r="4" fill="currentColor"/>
+    </svg>
+    Botanic Rhythm
+  </a>
+  <nav role="navigation" aria-label="Primary menu">
+  <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0" aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+
+<main id="cookies-policy" tabindex="-1">
+  <h1>Cookies Policy of Botanic Rhythm Gardening Services</h1>
+
+  <p>At Botanic Rhythm Gardening Services, we are committed to transparency regarding how we collect and use information when you visit our website or interact with our services. This Cookies Policy explains what cookies are, how we use them, what types we use, and how you can manage your cookie preferences.</p>
+
+  <h2>1. What Are Cookies?</h2>
+
+  <p>Cookies are small text files that websites place on your device (computer, tablet, or mobile) when you visit them. These files store information that helps websites remember your actions and preferences (such as login details, language settings, or other display preferences) over a period of time, so you don’t have to re-enter them whenever you come back to the site or browse from one page to another.</p>
+
+  <p>Cookies can also be used to collect information about how visitors use a website, which helps improve functionality and provide you with a better browsing experience.</p>
+
+  <h2>2. Types of Cookies We Use</h2>
+
+  <h3>2.1 Essential Cookies</h3>
+  <p>These cookies are necessary for the website to function properly and cannot be turned off in our systems. They enable core functionalities such as security, network management, and accessibility.</p>
+
+  <h3>2.2 Performance Cookies</h3>
+  <p>Performance cookies collect information about how visitors use our website, such as which pages are visited most often and whether users receive error messages. This data is aggregated and anonymous. It helps us understand and improve the performance of our site.</p>
+
+  <h3>2.3 Functional Cookies</h3>
+  <p>Functional cookies allow the website to remember choices you make (such as your username or language) to provide enhanced, personalized features.</p>
+
+  <h3>2.4 Advertising and Targeting Cookies</h3>
+  <p>These cookies are used to deliver advertisements more relevant to you and your interests. They can also limit how many times you see an ad and help measure the effectiveness of advertising campaigns. These cookies are typically placed by third-party advertising networks with our permission.</p>
+
+  <h2>3. How We Use Cookies</h2>
+
+  <p>We use cookies for several essential functions including:</p>
+  <ul>
+    <li>Keeping you logged in during your visit and across sessions.</li>
+    <li>Remembering your site preferences like language and display settings.</li>
+    <li>Improving site performance by understanding which pages users find useful.</li>
+    <li>Personalizing marketing efforts and showing relevant advertisements.</li>
+    <li>Ensuring security by protecting against fraudulent activity.</li>
+  </ul>
+
+  <h2>4. Third-Party Cookies</h2>
+
+  <p>Botanic Rhythm Gardening Services allows certain third-party service providers to place cookies on your device through our site (for example, Google Analytics for website performance tracking, or social media platforms for sharing features). These third parties operate under their own privacy policies and we recommend reviewing those policies to understand how they collect and use data.</p>
+
+  <h2>5. Managing Your Cookie Preferences</h2>
+
+  <p>Most web browsers allow you to control cookies through browser settings. You can choose to block or delete cookies entirely or selectively manage them. However, please note that blocking some cookies may impact the functionality and user experience of our website.</p>
+
+  <h3>5.1 How to Disable Cookies in Popular Browsers</h3>
+  <ul>
+    <li><strong>Chrome:</strong> Go to Settings &gt; Privacy and Security &gt; Cookies and other site data.</li>
+    <li><strong>Firefox:</strong> Go to Options &gt; Privacy & Security &gt; Cookies and Site Data.</li>
+    <li><strong>Safari:</strong> Go to Preferences &gt; Privacy &gt; Block all cookies.</li>
+    <li><strong>Edge:</strong> Go to Settings &gt; Site permissions &gt; Cookies and site data.</li>
+  </ul>
+
+  <p>Please remember that deleting or disabling cookies may require you to re-enter information when visiting websites and may reduce overall performance.</p>
+
+  <h2>6. Your Right to Accept or Decline Cookies</h2>
+
+  <p>Upon your first visit to our website, you will be presented with a consent dialog allowing you to accept or decline non-essential cookies. You have the right to refuse cookies but rejecting cookies that are critical to site functionality may limit your ability to access certain features.</p>
+
+  <p>You can change your preferences at any time by accessing your browser settings or clearing your cookies.</p>
+
+  <h2>7. How Long Do Cookies Last?</h2>
+
+  <p>Cookies can be session-based (deleted after you close your browser) or persistent (stay on your device for a set period). Duration depends on the purpose of the cookie. For example, essential session cookies typically expire after your session ends, while preferences cookies may be set to persist for weeks or months.</p>
+
+  <h2>8. Why Do We Use Cookies?</h2>
+
+  <p>Cookies help us:</p>
+  <ul>
+    <li>Authenticate users and maintain sessions securely.</li>
+    <li>Understand how our website is used to improve content and features.</li>
+    <li>Provide a personalized experience by remembering your preferences.</li>
+    <li>Measure and improve marketing effectiveness.</li>
+    <li>Protect the security and integrity of our services.</li>
+  </ul>
+
+  <h2>9. Cookies and Children</h2>
+
+  <p>Our website is not directed towards children under the age of 13. We do not knowingly obtain personal data from children or engage in targeted advertising towards them via cookies.</p>
+
+  <h2>10. Changes to This Cookies Policy</h2>
+
+  <p>We may update this Cookies Policy from time to time to reflect changes in legal requirements or our practices. We encourage you to revisit this page periodically for any updates.</p>
+
+  <h2>11. Contact Us</h2>
+
+  <p>If you have questions about our use of cookies or this policy, please contact us:</p>
+  <address>
+    Botanic Rhythm Gardening Services<br/>
+    69 W 9th St, New York, NY 10011, USA<br/>
+    Phone: <a href="tel:+18882009898" style="color: var(--color-accent); text-decoration: underline;">+1 (888) 200-9898</a><br/>
+    Email: <a href="mailto:privacy@botanicrhythm.com" style="color: var(--color-accent); text-decoration: underline;">privacy@botanicrhythm.com</a>
+  </address>
+</main>
+
+<footer role="contentinfo">
+  <address>
+    69 W 9th St, New York, NY 10011, USA<br/>
+    Phone: <a href="tel:+18882009898" style="color: var(--color-foreground); text-decoration: underline;">+1 (888) 200-9898</a>
+  </address>
+  &copy; 2024 Botanic Rhythm Gardening Services. All rights reserved.
+</footer>
+
+<!-- Decorative wing patterns -->
+<div class="wing-pattern w1" aria-hidden="true"></div>
+<div class="wing-pattern w2" aria-hidden="true"></div>
+<div class="wing-pattern w3" aria-hidden="true"></div>
+
+<!-- Cookie Consent Dialog -->
+<div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <p>We use cookies to improve your experience, personalize content, and analyze traffic. You can accept or decline non-essential cookies.</p>
+  <div>
+    <button id="accept-cookies" type="button" aria-label="Accept cookies">Accept</button>
+    <button id="decline-cookies" type="button" class="decline" aria-label="Decline cookies">Decline</button>
+  </div>
+</div>
+
+<script>
+  (function(){
+    const consentBox = document.getElementById('cookie-consent');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const declineBtn = document.getElementById('decline-cookies');
+    const storageKey = 'botanicRhythmCookiesConsent';
+
+    function hideConsent() {
+      consentBox.style.display = 'none';
+    }
+
+    function setConsent(value) {
+      localStorage.setItem(storageKey, value);
+      hideConsent();
+    }
+
+    // Check if user already consented/declined
+    const consent = localStorage.getItem(storageKey);
+    if(consent === 'accepted' || consent === 'declined') {
+      hideConsent();
+    } else {
+      consentBox.style.display = 'flex';
+    }
+
+    acceptBtn.addEventListener('click', function() {
+      setConsent('accepted');
+    });
+    declineBtn.addEventListener('click', function() {
+      setConsent('declined');
+    });
+  })();
+</script>
+
+</body>
+</html>
+

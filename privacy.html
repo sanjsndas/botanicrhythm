@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Botanic Rhythm Gardening - Privacy Policy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  /* CSS Variables for garden and insect/music theme */
+  :root {
+    --color-background: #112a12;
+    --color-foreground: #e6f1d2;
+    --color-accent: #5a9a4e;
+    --color-accent-dark: #3b6b2f;
+    --color-muted: #9dbb81;
+    --color-hover: #a3c77b;
+    --color-card-bg: rgba(90, 154, 78, 0.15);
+    --color-shadow: rgba(0,0,0,0.3);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--color-hover);
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--color-shadow);
+    transition: transform 0.3s ease;
+  }
+  img:hover {
+    transform: scale(1.05);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--color-accent-dark);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px var(--color-shadow);
+    z-index: 1000;
+  }
+
+  header .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: var(--color-foreground);
+    user-select: none;
+    display: flex;
+    align-items: center;
+  }
+
+  header .logo svg {
+    margin-right: 8px;
+    fill: var(--color-hover);
+  }
+
+  nav {
+    display: flex;
+    gap: 1.7rem;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover, nav a:focus {
+    background-color: var(--color-hover);
+    color: var(--color-background);
+  }
+
+  main {
+    max-width: 1080px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 1rem;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-hover);
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: var(--color-foreground);
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+  }
+
+  ul {
+    margin-left: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-muted);
+  }
+  ul li {
+    margin-bottom: 0.6rem;
+  }
+
+  /* Disclaimer & Satisfaction style reused for info blocks */
+  .info-block {
+    background: var(--color-card-bg);
+    border-radius: 12px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 6px 20px var(--color-shadow);
+    margin-bottom: 2rem;
+  }
+
+  footer {
+    margin-top: 4rem;
+    background: var(--color-accent-dark);
+    color: var(--color-foreground);
+    text-align: center;
+    padding: 1.8rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    user-select: none;
+  }
+  footer address {
+    font-style: normal;
+    margin-bottom: 0.4rem;
+  }
+
+  /* Insect + music decorative patterns */
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 40vh;
+    left: -8vw;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at center, var(--color-hover) 20%, transparent 70%);
+    border-radius: 50% 50% 50% 40% / 60% 50% 50% 40%;
+    filter: blur(30px);
+    opacity: 0.15;
+    transform: rotate(25deg);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: "♪";
+    position: fixed;
+    top: 25vh;
+    right: 3vw;
+    font-size: 70px;
+    color: var(--color-hover);
+    opacity: 0.15;
+    transform: rotate(-15deg);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    font-weight: 900;
+  }
+
+  .wing-pattern {
+    position: absolute;
+    width: 90px;
+    height: 130px;
+    background: radial-gradient(ellipse 60% 75% at center, var(--color-accent), transparent 80%);
+    border-radius: 60% 40% 60% 40% / 50% 60% 40% 50%;
+    opacity: 0.3;
+    filter: drop-shadow(0 0 2px var(--color-accent));
+    transform-origin: center bottom;
+    animation: wing-flap 4s ease-in-out infinite;
+  }
+  .wing-pattern.w1 { top: 20%; left: 5%; animation-delay: 0s;}
+  .wing-pattern.w2 { top: 40%; left: 90%; animation-delay: 1.5s;}
+  .wing-pattern.w3 { top: 75%; left: 4%; animation-delay: 3s;}
+
+  @keyframes wing-flap {
+    0%,100% { transform: rotate(15deg) scale(1); }
+    50% { transform: rotate(-12deg) scale(1.1); }
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    nav {
+      gap: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header role="banner" aria-label="Primary navigation">
+  <a href="index.html" class="logo" aria-label="Botanic Rhythm Gardening homepage">
+    <svg aria-hidden="true" width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="4"/>
+      <path d="M20 44s8-12 20-12" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="43" cy="28" r="4" fill="currentColor"/>
+    </svg>
+    Botanic Rhythm
+  </a>
+  <nav role="navigation" aria-label="Primary menu">
+    <a href="index.html" tabindex="0" aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+
+<main id="privacy-policy" tabindex="-1">
+  <h1>Privacy Policy of Botanic Rhythm Gardening Services</h1>
+
+  <p>Welcome to Botanic Rhythm Gardening Services. We prioritize your privacy and are committed to protecting your personal information. This comprehensive Privacy Policy explains how we collect, use, disclose, and safeguard your data when you visit our website and use our services. Please read this document carefully to understand our practices regarding your information and how we will treat it.</p>
+
+  <h2>1. Information We Collect</h2>
+
+  <p>We collect various types of information to provide and improve our services to you. This includes:</p>
+  <ul>
+    <li><strong>Personal Identification Information:</strong> Name, email address, mailing address, phone number, and other contact details you provide when filling out forms or contacting us.</li>
+    <li><strong>Payment Information:</strong> Billing details, credit card numbers, and other payment processing information when you engage in paid services. We use secure and encrypted channels for these transactions.</li>
+    <li><strong>Usage Data:</strong> Information automatically collected when you interact with our website such as IP address, browser type, operating system, pages visited, and time spent on pages.</li>
+    <li><strong>Cookies and Tracking Technologies:</strong> Small data files stored on your device to enhance your browsing experience and collect analytics data.</li>
+    <li><strong>Location Data:</strong> With your consent, we may collect location data to offer location-specific services and information.</li>
+  </ul>
+
+  <h2>2. How We Use Your Information</h2>
+
+  <p>The information we collect is used for various important purposes, including:</p>
+  <ul>
+    <li><strong>Providing Services:</strong> To offer, maintain, and improve our gardening services tailored to your needs.</li>
+    <li><strong>Customer Support:</strong> To respond to your inquiries, provide support, and communicate important updates.</li>
+    <li><strong>Billing and Transactions:</strong> To process payments and send invoices or receipts.</li>
+    <li><strong>Marketing and Communications:</strong> To send newsletters, promotions, and other communications, with your consent where required by law.</li>
+    <li><strong>Website Analytics:</strong> To monitor and analyze usage patterns to optimize user experience and website performance.</li>
+    <li><strong>Legal Compliance:</strong> To comply with legal obligations, protect our rights, and enforce our terms and policies.</li>
+  </ul>
+
+  <h2>3. Cookies and Tracking Technologies</h2>
+
+  <p>We use cookies and similar tracking technologies to personalize your experience, provide social media features, and analyze traffic on our website. You can control cookie preferences through your browser settings, but disabling cookies may affect some website functionalities.</p>
+
+  <h3>Types of Cookies We Use</h3>
+  <ul>
+    <li><strong>Essential Cookies:</strong> Necessary for the operation and security of the website.</li>
+    <li><strong>Performance Cookies:</strong> Collect data to help us understand how visitors use our site and improve the experience.</li>
+    <li><strong>Functionality Cookies:</strong> Enable enhanced features such as remembering preferences.</li>
+    <li><strong>Advertising Cookies:</strong> Used for marketing and tracking purposes by third-party providers only when you opt-in.</li>
+  </ul>
+
+  <h2>4. Information Sharing and Disclosure</h2>
+
+  <p>Your privacy is critically important to us. We do not sell your personal information. However, we may share your data in specific circumstances:</p>
+  <ul>
+    <li><strong>Service Providers:</strong> Trusted third-party companies who assist us in operating our business, such as payment processors, hosting services, and marketing partners, who are bound by confidentiality agreements.</li>
+    <li><strong>Legal Requirements:</strong> To comply with legal processes or protect rights, safety, and property.</li>
+    <li><strong>Business Transfers:</strong> In case of mergers, sales, or asset transfers, your information may be part of the transferred assets.</li>
+  </ul>
+
+  <h2>5. Data Security</h2>
+
+  <p>We implement robust security measures including encryption, firewalls, and secure server environments to protect your personal data against unauthorized access, alteration, disclosure, or destruction. Unfortunately, no transmission method over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+  <h2>6. Your Rights and Choices</h2>
+
+  <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+  <ul>
+    <li><strong>Access and Correction:</strong> Request access to your personal data and rectify inaccuracies.</li>
+    <li><strong>Deletion:</strong> Request deletion of your personal data where applicable.</li>
+    <li><strong>Object to Processing:</strong> Opt-out of data processing for marketing or profiling.</li>
+    <li><strong>Data Portability:</strong> Receive a copy of your data in a portable format.</li>
+    <li><strong>Withdraw Consent:</strong> Revoke your consent for data processing where previously provided.</li>
+  </ul>
+
+  <p>To exercise these rights, please contact us through the information in the "Contact Us" section below. We will respond to your requests within a reasonable timeframe.</p>
+
+  <h2>7. Data Retention</h2>
+
+  <p>We retain your personal information only as long as necessary to fulfill the purposes outlined in this Privacy Policy and to comply with legal obligations. When data is no longer needed, we securely delete or anonymize it.</p>
+
+  <h2>8. International Transfers</h2>
+
+  <p>By using our services, you acknowledge that information you provide may be transferred to and processed in countries outside of your residence, which may have different data protection laws. We take appropriate steps to ensure data is treated securely and in accordance with this policy.</p>
+
+  <h2>9. Children’s Privacy</h2>
+
+  <p>Our services are not directed to anyone under the age of 13, and we do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us personal data, please contact us immediately to have the data removed.</p>
+
+  <h2>10. Links to Other Websites</h2>
+
+  <p>Our website may contain links to third-party websites not operated by us. We are not responsible for the privacy practices or content of those sites. We encourage you to read their privacy policies before providing any personal information.</p>
+
+  <h2>11. Changes to This Privacy Policy</h2>
+
+  <p>We reserve the right to update this Privacy Policy at any time to reflect changes in laws, our operations, or for other reasons. Changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically to stay informed about how we protect your information.</p>
+
+  <h2>12. Contact Us</h2>
+
+  <p>If you have any questions, concerns, or requests regarding your privacy or this policy, please contact us at:</p>
+
+  <address>
+    Botanic Rhythm Gardening Services<br />
+    69 W 9th St, New York, NY 10011, USA<br />
+    Phone: <a href="tel:+12125551234" style="color: var(--color-accent); text-decoration: underline;">+1 (212) 555-1234</a><br />
+    Email: <a href="mailto:privacy@botanicrhythm.com" style="color: var(--color-accent); text-decoration: underline;">privacy@botanicrhythm.com</a>
+  </address>
+
+  <h2>13. Detailed Sections for Transparency</h2>
+
+  <h3>13.1 Collection of Personal Identification Information</h3>
+  <p>In the course of engaging with our services, you may provide us with personally identifying information, such as your name, postal address, email address, telephone number, and other relevant contact data. This information is primarily collected through web forms, correspondence, phone communications, or in-person consultations. The data is essential for us to effectively communicate, schedule services, and ensure proper billing.</p>
+
+  <h3>13.2 Payment Information and Security</h3>
+  <p>When you engage in paid services, we collect billing and payment details. Our payment processing is conducted via secure, encrypted channels with reputable third-party vendors who are compliant with Payment Card Industry Data Security Standards (PCI DSS). We do not store your full payment data on our servers, minimizing risks and maintaining high security standards.</p>
+
+  <h3>13.3 Automated Data Collection</h3>
+  <p>We automatically collect information about your visit to our website using server logs, cookies, and third-party analytics tools. These data points may include your IP address, browser type and version, device identifiers, pages viewed, time stamps, and user interaction patterns. This data assists us in diagnosing technical issues, improving user experience, and understanding overall site engagement.</p>
+
+  <h3>13.4 Use of Cookies and Tracking Technologies</h3>
+  <p>Cookies are small text files placed on your device by our website or by third-party service providers to recognize your browser and store preferences or other data. We employ:</p>
+  <ul>
+    <li><strong>Session Cookies:</strong> Required for proper functioning of some website features and expire after you close your browser.</li>
+    <li><strong>Persistent Cookies:</strong> Keep track of your preferences for return visits and can last up to several months.</li>
+    <li><strong>Third-Party Cookies:</strong> Used primarily by analytics services like Google Analytics to gather anonymized usage statistics.</li>
+  </ul>
+
+  <p>You may configure or block cookies using your browser settings, though this may degrade some site functions.</p>
+
+  <h3>13.5 Sharing Personal Information with Service Providers</h3>
+  <p>We collaborate with trusted partners for website hosting, payment processing, marketing, customer support, and data analytics. All such partners are legally bound to handle your data securely and only for the purposes required to provide their services to us.</p>
+
+  <h3>13.6 Legal Disclosure and Protection of Rights</h3>
+  <p>We may disclose your personal data if required by law, subpoena, or governmental investigation. Additionally, we reserve the right to use or disclose your information to protect our rights, property, or safety and those of others.</p>
+
+  <h3>13.7 Security Measures</h3>
+  <p>We utilize industry-standard protections such as Secure Socket Layer (SSL) protocols, firewalls, access controls, and encryption where appropriate to protect your data. All employees and contractors are trained and obligated to maintain the confidentiality of your personal information.</p>
+
+  <h3>13.8 Your Rights Under Privacy Laws</h3>
+  <p>Depending on your jurisdiction and applicable law, you may have additional privacy rights such as:</p>
+  <ul>
+    <li><strong>Right to Access:</strong> Obtain copies of your personal data held by us.</li>
+    <li><strong>Right to Correct:</strong> Request rectification of inaccurate or incomplete data.</li>
+    <li><strong>Right to Erasure:</strong> Request deletion of data where relevant and permissible.</li>
+    <li><strong>Right to Restrict or Object:</strong> Limit or object to certain processing activities such as marketing communications.</li>
+    <li><strong>Right to Data Portability:</strong> Receive your data in a commonly used, machine-readable format.</li>
+  </ul>
+
+  <p>If you wish to exercise any of these rights, please contact us using the provided contact details.</p>
+
+  <h3>13.9 Data Retention Periods</h3>
+  <p>We retain your personal information for as long as necessary to deliver our services, comply with legal obligations, resolve disputes, and enforce agreements. Specific retention periods vary depending on data type and regulatory requirements.</p>
+
+  <h3>13.10 Privacy of Children</h3>
+  <p>Protecting children's privacy is especially important. We do not knowingly collect or solicit information from children under 13 years old. If we discover that we have inadvertently gathered personal information from a child without parental consent, we will promptly delete such data.</p>
+
+  <h3>13.11 Third-Party Websites</h3>
+  <p>Our website may contain links to external websites not operated by us. We do not control and are not responsible for their content or privacy practices. Please review the privacy policies of those sites independently.</p>
+
+  <h3>13.12 Updates to this Privacy Policy</h3>
+  <p>We may update our Privacy Policy from time to time to reflect changes in practices, legal requirements, or business operations. We encourage you to review this page periodically for any updates. Continued use of our site constitutes acceptance of any amended policy.</p>
+
+  <h3>13.13 How to Contact Us</h3>
+  <p>If you have questions about this Privacy Policy, concerns about your data, or wish to exercise your privacy rights, please reach out to us at:</p>
+  <address>
+    Botanic Rhythm Gardening Services<br />
+    69 W 9th St, New York, NY 10011, USA<br />
+    Phone: <a href="tel:+18882009898" style="color: var(--color-accent); text-decoration: underline;">+1 (888) 200-9898</a><br />
+    Email: <a href="mailto:privacy@botanicrhythm.com" style="color: var(--color-accent); text-decoration: underline;">privacy@botanicrhythm.com</a>
+  </address>
+
+  <h2>14. Glossary of Terms</h2>
+
+  <h3>14.1 Personal Data</h3>
+  <p>Any information relating to an identified or identifiable individual, such as name, email address, phone number, etc.</p>
+
+  <h3>14.2 Processing</h3>
+  <p>Any operation performed on personal data, including collection, storage, use, erasure, or disclosure.</p>
+
+  <h3>14.3 Cookie</h3>
+  <p>A small file placed on your device by a website, used to enhance browsing experience or track web activity.</p>
+
+  <h3>14.4 Service Provider</h3>
+  <p>Third-party organizations that perform services on behalf of Botanic Rhythm Gardening Services.</p>
+
+  <h3>14.5 Consent</h3>
+  <p>Any freely given, specific, informed, and unambiguous indication of your wishes by which you signify agreement to processing of personal data.</p>
+
+  <h2>15. Frequently Asked Questions (FAQs)</h2>
+
+  <h3>15.1 What Privacy Information Do You Collect?</h3>
+  <p>We collect contact info, payment details, usage data, cookies, and location data when you engage with our services.</p>
+
+  <h3>15.2 Can I Opt-out of Marketing Emails?</h3>
+  <p>Yes, marketing communications include unsubscribe instructions. You can also contact us anytime to adjust your preferences.</p>
+
+  <h3>15.3 Is My Payment Information Secure?</h3>
+  <p>Absolutely, payments are processed through secure, encrypted third-party processors adhering to PCI standards.</p>
+
+  <h3>15.4 How Can I Review or Delete My Data?</h3>
+  <p>You can contact us using the details above, and we will assist with your privacy requests promptly.</p>
+
+  <h3>15.5 Do You Share My Information?</h3>
+  <p>We share data only with trusted service providers or as legally required. We never sell your personal data.</p>
+
+  <h3>15.6 How Long Do You Keep My Data?</h3>
+  <p>Data retention depends on legal requirements and service needs but is minimized to the necessary duration.</p>
+
+  <h3>15.7 What About Children’s Privacy?</h3>
+  <p>We do not knowingly collect data from children under 13 and take swift action if discovered.</p>
+
+  <h3>15.8 How Will I Know If Privacy Policy Changes?</h3>
+  <p>Updates are posted on this page with the effective date; please review periodically.</p>
+
+  <h2>16. Effective Date and Version</h2>
+  <p>This Privacy Policy is effective as of June 2024 and is version 1.0.</p>
+
+  <p><strong>Thank you for trusting Botanic Rhythm Gardening Services with your privacy.</strong></p>
+
+</main>
+
+<footer role="contentinfo">
+  <address>
+    69 W 9th St, New York, NY 10011, USA<br/>
+    Phone: <a href="tel:+18882009898" style="color: var(--color-foreground); text-decoration: underline;">+1 (888) 200-9898</a>
+  </address>
+  &copy; 2024 Botanic Rhythm Gardening Services. All rights reserved.
+</footer>
+
+<!-- Decorative wing patterns -->
+<div class="wing-pattern w1" aria-hidden="true"></div>
+<div class="wing-pattern w2" aria-hidden="true"></div>
+<div class="wing-pattern w3" aria-hidden="true"></div>
+
+</body>
+</html>
+

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Botanic Rhythm Gardening - Terms and Conditions</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  /* CSS Variables for garden and insect/music theme */
+  :root {
+    --color-background: #112a12;
+    --color-foreground: #e6f1d2;
+    --color-accent: #5a9a4e;
+    --color-accent-dark: #3b6b2f;
+    --color-muted: #9dbb81;
+    --color-hover: #a3c77b;
+    --color-card-bg: rgba(90, 154, 78, 0.15);
+    --color-shadow: rgba(0,0,0,0.3);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--color-hover);
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--color-shadow);
+    transition: transform 0.3s ease;
+  }
+  img:hover {
+    transform: scale(1.05);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--color-accent-dark);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px var(--color-shadow);
+    z-index: 1000;
+  }
+
+  header .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: var(--color-foreground);
+    user-select: none;
+    display: flex;
+    align-items: center;
+  }
+
+  header .logo svg {
+    margin-right: 8px;
+    fill: var(--color-hover);
+  }
+
+  nav {
+    display: flex;
+    gap: 1.7rem;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover, nav a:focus {
+    background-color: var(--color-hover);
+    color: var(--color-background);
+  }
+
+  main {
+    max-width: 1080px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 1rem;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-hover);
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: var(--color-foreground);
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+  }
+
+  ul {
+    margin-left: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-muted);
+  }
+  ul li {
+    margin-bottom: 0.6rem;
+  }
+
+  /* Disclaimer & Satisfaction style reused for info blocks */
+  .info-block {
+    background: var(--color-card-bg);
+    border-radius: 12px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 6px 20px var(--color-shadow);
+    margin-bottom: 2rem;
+  }
+
+  footer {
+    margin-top: 4rem;
+    background: var(--color-accent-dark);
+    color: var(--color-foreground);
+    text-align: center;
+    padding: 1.8rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    user-select: none;
+  }
+  footer address {
+    font-style: normal;
+    margin-bottom: 0.4rem;
+  }
+
+  /* Insect + music decorative patterns */
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 40vh;
+    left: -8vw;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at center, var(--color-hover) 20%, transparent 70%);
+    border-radius: 50% 50% 50% 40% / 60% 50% 50% 40%;
+    filter: blur(30px);
+    opacity: 0.15;
+    transform: rotate(25deg);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: "♪";
+    position: fixed;
+    top: 25vh;
+    right: 3vw;
+    font-size: 70px;
+    color: var(--color-hover);
+    opacity: 0.15;
+    transform: rotate(-15deg);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    font-weight: 900;
+  }
+
+  .wing-pattern {
+    position: absolute;
+    width: 90px;
+    height: 130px;
+    background: radial-gradient(ellipse 60% 75% at center, var(--color-accent), transparent 80%);
+    border-radius: 60% 40% 60% 40% / 50% 60% 40% 50%;
+    opacity: 0.3;
+    filter: drop-shadow(0 0 2px var(--color-accent));
+    transform-origin: center bottom;
+    animation: wing-flap 4s ease-in-out infinite;
+  }
+  .wing-pattern.w1 { top: 20%; left: 5%; animation-delay: 0s;}
+  .wing-pattern.w2 { top: 40%; left: 90%; animation-delay: 1.5s;}
+  .wing-pattern.w3 { top: 75%; left: 4%; animation-delay: 3s;}
+
+  @keyframes wing-flap {
+    0%,100% { transform: rotate(15deg) scale(1); }
+    50% { transform: rotate(-12deg) scale(1.1); }
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    nav {
+      gap: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header role="banner" aria-label="Primary navigation">
+  <a href="index.html" class="logo" aria-label="Botanic Rhythm Gardening homepage">
+    <svg aria-hidden="true" width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="4"/>
+      <path d="M20 44s8-12 20-12" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="43" cy="28" r="4" fill="currentColor"/>
+    </svg>
+    Botanic Rhythm
+  </a>
+  <nav role="navigation" aria-label="Primary menu">
+<a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+
+<main id="terms-and-conditions" tabindex="-1">
+  <h1>Terms and Conditions of Botanic Rhythm Gardening Services</h1>
+
+  <p>Welcome to Botanic Rhythm Gardening Services. Please read these Terms and Conditions ("Terms") carefully before using our website and services. By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of these Terms, you must not use our services.</p>
+
+  <h2>1. Use of Services</h2>
+  <p>Our gardening services, including garden design, maintenance, pest control, and related consulting, are provided subject to your agreement to these Terms. You agree to use our services only for lawful purposes and in accordance with these Terms.</p>
+
+  <h3>1.1 Eligibility</h3>
+  <p>By using our services, you represent that you are at least 18 years old or have the consent of a legal guardian. We reserve the right to refuse service to anyone for any reason.</p>
+
+  <h2>2. Booking and Payment</h2>
+  <p>Scheduling of services requires confirmation by Botanic Rhythm Gardening. We accept payment via the methods communicated upon booking. Payment terms and conditions will be provided before service commencement.</p>
+
+  <h3>2.1 Pricing</h3>
+  <p>All prices for services are outlined on our website and are subject to change without prior notice. We reserve the right to update pricing to reflect changes in costs or scope of services.</p>
+
+  <h3>2.2 Payment Terms</h3>
+  <p>Payments are due upon invoicing unless otherwise agreed in writing. Late payments may incur additional fees or suspension of services.</p>
+
+  <h2>3. Service Cancellation and Rescheduling</h2>
+  <p>Clients may cancel or reschedule scheduled services by contacting us at least 48 hours before the appointment. Cancellations made within less than 48 hours may be subject to cancellation fees.</p>
+
+  <h2>4. Client Responsibilities</h2>
+  <p>You agree to provide safe and reasonable access to your property for our team to perform gardening services. You are responsible for disclosing any hazards, sensitive plants, or other relevant information.</p>
+
+  <h2>5. Our Responsibilities</h2>
+  <p>We will provide gardening services with reasonable care and skill in a professional manner consistent with industry standards. However, we cannot guarantee specific outcomes due to variables such as weather, soil conditions, and biological factors.</p>
+
+  <h3>5.1 Limitations</h3>
+  <p>We are not responsible for damages caused by unforeseeable circumstances or misuse of our recommended treatments after service completion.</p>
+
+  <h2>6. Intellectual Property</h2>
+  <p>All content, design, and materials on our website and related platforms are the property of Botanic Rhythm Gardening Services or its licensors. You may not copy, reproduce, distribute, or create derivative works without our prior written consent.</p>
+
+  <h2>7. Privacy</h2>
+  <p>Your privacy is important to us. Please review our Privacy Policy for details on how we collect, use, and protect your personal information.</p>
+
+  <h2>8. Limitation of Liability</h2>
+  <p>To the fullest extent permitted by law, Botanic Rhythm Gardening Services shall not be liable for any indirect, incidental, consequential, or punitive damages arising out of or relating to the performance or non-performance of our services.</p>
+
+  <h2>9. Indemnification</h2>
+  <p>You agree to indemnify, defend, and hold harmless Botanic Rhythm Gardening Services, its owners, employees, and agents from any claims, damages, losses, liabilities, or expenses resulting from your breach of these Terms or misuse of our services.</p>
+
+  <h2>10. Termination</h2>
+  <p>We reserve the right to terminate or suspend your access to services immediately without prior notice for violations of these Terms or any unlawful or harmful activity.</p>
+
+  <h2>11. Force Majeure</h2>
+  <p>Botanic Rhythm Gardening Services shall not be held liable for delays or failure to perform due to causes beyond our reasonable control, including but not limited to natural disasters, weather conditions, pandemics, or governmental restrictions.</p>
+
+  <h2>12. Governing Law</h2>
+  <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law principles.</p>
+
+  <h2>13. Dispute Resolution</h2>
+  <p>Any disputes arising out of or relating to these Terms or use of our services shall first be attempted to be resolved through informal negotiation. If unresolved, disputes shall be submitted to binding arbitration in New York in accordance with the rules of the American Arbitration Association.</p>
+
+  <h2>14. Changes to Terms</h2>
+  <p>We reserve the right to modify or update these Terms at any time. Changes will be posted on this page with the updated effective date. Your continued use of our services after changes indicates your acceptance of the new Terms.</p>
+
+  <h2>15. Contact Information</h2>
+  <p>If you have any questions or concerns about these Terms, please reach out to us:</p>
+  <address>
+    Botanic Rhythm Gardening Services<br />
+    69 W 9th St, New York, NY 10011, USA<br />
+    Phone: <a href="tel:+18882009898" style="color: var(--color-accent); text-decoration: underline;">+1 (888) 200-9898</a><br />
+    Email: <a href="mailto:contact@botanicrhythm.com" style="color: var(--color-accent); text-decoration: underline;">contact@botanicrhythm.com</a>
+  </address>
+
+  <h2>16. Entire Agreement</h2>
+  <p>These Terms and any documents expressly incorporated herein constitute the entire agreement between you and Botanic Rhythm Gardening Services regarding your use of our services and supersede all prior agreements.</p>
+
+  <h2>17. Severability</h2>
+  <p>If any provision of these Terms is found invalid or unenforceable, the remaining provisions shall remain in full force and effect.</p>
+
+  <h2>18. Waiver</h2>
+  <p>Failure to enforce any right under these Terms shall not constitute a waiver of such right unless acknowledged in writing by Botanic Rhythm Gardening Services.</p>
+
+  <h2>19. Accessibility</h2>
+  <p>We strive to ensure our website and services are accessible to all users. If you experience difficulties or have compliance concerns, please contact us.</p>
+
+  <h2>20. Feedback</h2>
+  <p>We welcome your suggestions and feedback to help us improve our services. Please send comments to our contact email above.</p>
+
+  <p><strong>Thank you for choosing Botanic Rhythm Gardening Services. We look forward to serving you and helping your garden flourish in rhythm with nature.</strong></p>
+
+</main>
+
+<footer role="contentinfo">
+  <address>
+    69 W 9th St, New York, NY 10011, USA<br/>
+    Phone: <a href="tel:+18002009898" style="color: var(--color-foreground); text-decoration: underline;">+1 (888) 200-9898</a>
+  </address>
+  &copy; 2024 Botanic Rhythm Gardening Services. All rights reserved.
+</footer>
+
+<!-- Decorative wing patterns -->
+<div class="wing-pattern w1" aria-hidden="true"></div>
+<div class="wing-pattern w2" aria-hidden="true"></div>
+<div class="wing-pattern w3" aria-hidden="true"></div>
+
+</body>
+</html>
+
